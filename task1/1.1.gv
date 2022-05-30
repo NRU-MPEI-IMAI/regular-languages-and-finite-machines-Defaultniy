@@ -1,0 +1,10 @@
+digraph G {  
+    rankdir="LR";
+   0 [style = invis];
+   1[shape = circle];
+   2 [shape = doublecircle];
+   0->1;
+   1->1 [label="a,b"];
+   1->2 [label="c"];
+   2->2 [label="a,b"];
+}

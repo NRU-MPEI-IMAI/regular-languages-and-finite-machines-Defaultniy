@@ -1,0 +1,36 @@
+digraph G2 {
+rankdir="LR";
+node [shape = "circle"];
+q0[style=invis];
+q00[style=invis];
+q1[shape=doublecircle];
+q2[shape=doublecircle];
+q3[shape=doublecircle];
+q6[shape=doublecircle];
+q0->q1;
+q1->q2->q3[label="a"];
+q1->q1[label="b"];
+q2->q2[label="b"];
+q3->q3[label="b"];
+q00->q4;
+q4->q5->q6[label="b"];
+q4->q4[label="a"];
+q5->q5[label="a"];
+q6->q6[label="a"];
+q1q0[style=invis];
+q1q6[shape=doublecircle];
+q2q6[shape=doublecircle];
+q3q6[shape=doublecircle];
+q1q0->q1q4
+q1q4->q2q4->q3q4[label="a"];
+q1q4->q1q5->q1q6[label="b"];
+q2q4->q2q5[label="b"];
+q1q5->q2q5[label="a"];
+q2q5->q3q5[label="a"];
+q2q5->q2q6[label="b"];
+q1q6->q2q6->q3q6[label="a"];
+q3q4->q3q5->q3q6[label="b"];
+q1q6->q1q6[label="b"];
+q2q6->q2q6[label="b"];
+q3q6->q3q6[label="b"];
+}
