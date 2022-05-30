@@ -1,0 +1,19 @@
+digraph G8 {
+rankdir="LR";
+node[shape = "circle"];
+q0 [style = invis];
+q1[shape = doublecircle];
+q1q2[shape = doublecircle];
+q1q2q3[shape = doublecircle];
+q1q3[shape = doublecircle];
+q2q3[shape = doublecircle];
+q0->q1;
+q1->q2[label="b"];
+q2->q3[label="a,b"];
+q1->q1q2->q1q2q3[label="a"];
+q1q2->q2q3->q3->q1[label="b"];
+q1q2->q1q2q3[label="a"];
+q1q2q3->q1q2q3[label="a,b"];
+q2q3->q1q3[label="a"];
+q1q3->q1q2[label="a,b"];
+}
