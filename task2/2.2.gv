@@ -1,0 +1,22 @@
+digraph G4 {
+rankdir="LR";
+node[shape = "circle"];
+q0 [style = invis];
+q00[style= invis];
+q01[style= invis];
+q4q6[shape = doublecircle];
+q4[shape = doublecircle];
+q6[shape = doublecircle];
+q0->q1;
+q1->q2->q3->q4[label="a"];
+q1->q2->q3->q4[label="b"];
+q4->q4[label="a,b"];
+q00->q5;
+q5->q6[label="a,b"];
+q6->q5[label="a,b"];
+q01->q1q5;
+q1q5->q2q6->q3q5->q4q6[label="a"];
+q4q6->q4q5[label="a,b"];
+q4q5->q4q6[label="a,b"];
+q1q5->q2q6->q3q5->q4q6[label="b"];
+}
